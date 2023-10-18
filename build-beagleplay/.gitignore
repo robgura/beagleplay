@@ -1,0 +1,12 @@
+
+cache
+deploy-ti
+downloads
+sstate-cache
+tmp
+*.log
+
+bitbake.lock
+
+tmp-baremetal
+tmp-glibc
