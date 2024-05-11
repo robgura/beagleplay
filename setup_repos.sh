@@ -8,7 +8,7 @@ git_clone() {
     if [ -d ${out_dir} ]
     then
         echo Updating ${out_dir}
-        (cd ${out_dir} && git checkout ${branch})
+        (cd ${out_dir} && git checkout ${branch} && git pull)
     else
         git clone -b ${branch} ${url}
     fi
