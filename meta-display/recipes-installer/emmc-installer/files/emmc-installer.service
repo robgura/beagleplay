@@ -1,0 +1,12 @@
+[Unit]
+Description=Copy wic from sd card to emmc
+After=multi-user.target
+Requires=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/emmc-installer/emmc-installer
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
