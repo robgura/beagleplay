@@ -1,0 +1,16 @@
+[submodule "yocto/meta/meta-ti"]
+	path = yocto/meta/meta-ti
+	url = https://git.ti.com/cgit/arago-project/meta-ti
+	branch = scarthgap
+[submodule "yocto/meta/poky"]
+	path = yocto/meta/poky
+	url = git://git.yoctoproject.org/poky
+	branch = scarthgap
+[submodule "yocto/meta/meta-arm"]
+	path = yocto/meta/meta-arm
+	url = git://git.yoctoproject.org/meta-arm
+	branch = scarthgap
+[submodule "yocto/meta/meta-openembedded"]
+	path = yocto/meta/meta-openembedded
+	url = https://git.openembedded.org/meta-openembedded
+	branch = scarthgap

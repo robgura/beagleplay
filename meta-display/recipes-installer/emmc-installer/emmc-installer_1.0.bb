@@ -13,6 +13,7 @@ FILES:${PN} += "\
     ${systemd_unitdir}/system/emmc-installer.service \
     /display-image-emmc.wic.bmap \
     /display-image-emmc.wic.xz \
+    /here \
     /opt/emmc-installer/emmc-installer \
     /opt/emmc-installer/led-control.sh \
 "
@@ -26,7 +27,7 @@ SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 do_install[depends] += "display-image:do_image_complete"
 
 do_install() {
-    # Copy the actual image file
+    touch ${D}/here
     IMAGE_FILE=$(readlink -f ${DEPLOY_DIR_IMAGE}/display-image-${MACHINE}.rootfs.wic.xz)
     install -m 0644 -D $IMAGE_FILE ${D}/display-image-emmc.wic.xz
 
